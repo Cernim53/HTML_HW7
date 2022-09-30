@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<!-- Реализовать html-страницу с формой для ввода данных кредитной карты. 
+Форма состоит из полей для ввода:
+■ номера кредитной карты;  
+■ имени владельца;
+■ срока действия; 
+■ CVV / CVN номера. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Кредитная карта</title>
+    <link rel="stylesheet" href="creditCard.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-header-container">
+            <h1 class="main-header">Credit card details</h1>
+        </div>
+        <div class="container-forms-img">
+            <form>
+                <div class="form-card-number">
+                    <label for="card-number">Card Number</label>
+                    <div class="card-item">
+                        <input type="text" class="card-number">
+                    </div>
+                </div>
+                <div class="form-card-name">
+                    <label for="card-name">Name on Card</label>
+                    <div class="card-item">
+                        <input type="text" class="card-name">
+                    </div>  
+                </div>
+                <div class="form-card-validity">
+                    <div class="card-validity">
+                        <label for="card-month">Expire Date</label>
+                        <div class="card-item">
+                            <input type="text" class="card-month">
+                        </div>
+                    </div>
+                    <div class="card-validity">
+                        <label for="card-year" class="hidden">0000</label>
+                        <div class="card-item">
+                            <input type="text" class="card-year">
+                        </div>
+                    </div>
+                    <div class="card-validity">
+                        <label for="card-cvv">CVV/CVN</label>
+                        <div class="card-item">
+                            <input type="password" class="card-cvv">
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="images">
+                <img src="Images/moon_flag2.png" alt="Moon">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

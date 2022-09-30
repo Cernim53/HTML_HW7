@@ -1,0 +1,233 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.2em;
+}
+form{
+    margin-left: 1em;
+}
+.elements{
+    margin-top: 2.5em;
+}
+h3{
+    font-family: sans-serif;
+    font-size: 1.3em;
+}
+
+/* свойства input type="text" */
+.text-noactive,
+.text-active-valid,
+.text-active-invalid{
+    margin-right: 0.5em;
+    padding: 0.8em 2em;
+    border: 3px solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.text-noactive{
+    border-color: initial;
+}
+.text-noactive::placeholder{
+    color: initial;
+    font-size: 1.2em;
+}
+.text-active-valid{
+    border-color: #41ad49;
+}
+.text-active-valid::placeholder{
+    color: #41ad49;
+    font-size: 1.2em;
+}
+.text-active-invalid{
+    border-color:  #e44061;
+}
+.text-active-invalid::placeholder{
+    color: #e44061;
+    font-size: 1.2em;
+}
+/* символы "v" и "x" для input type="text"*/
+.text-active-valid + label, 
+.text-active-invalid + label{
+    position: relative;
+}
+.text-active-valid + label::after{
+    content: '\2713';
+    position: absolute;
+    right: 30px;
+    top: 0;
+    color: #41ad49;
+}
+.text-active-invalid + label::after{
+    content: 'x';
+    position: absolute;
+    right: 30px;
+    top: 0;
+    color: #e44061;
+}
+
+/* свойства input type="checkbox" */
+/* скрываем стандартные checkbox */
+.checkbox-active,
+.checkbox-noactive{
+    position: absolute;
+    opacity: 0;
+}
+/* создаем свои, пользовательские checkbox */
+/* рамки */
+.checkbox-active + label>span,
+.checkbox-noactive + label>span{
+    width: 2.5em;
+    height: 1.2em;
+    border: 2px solid black;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+}
+.checkbox-active + label>span{
+    border-color: #41ad49;
+}
+.checkbox-noactive + label>span{
+    border-color: #e44061;
+}
+/* переключатели */
+.checkbox-active + label,
+.checkbox-noactive + label{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    margin-right: 1em;
+}
+.checkbox-active + label::before{
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 0.8em;
+    border: 2px solid #41ad49;
+    border-radius: 0.25em;
+    background: #41ad49;
+    position: absolute;
+    left: 3px;
+}
+.checkbox-noactive + label::before{
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 0.8em;
+    border: 2px solid #e44061;
+    border-radius: 0.25em;
+    background: #e44061;
+    position: absolute;
+    left: 26px;
+}
+
+/* свойства input type="radio" */
+/* скрываем стандартные radio button */
+.radio-male,
+.radio-female{
+    position: absolute;
+    opacity: 0;
+}
+/* создаем свои, пользовательские radio button */
+/* рамки */
+.radio-male + label>span,
+.radio-female + label>span{
+    width: 1.2em;
+    height: 1.2em;
+    border: 2px solid black;
+    border-radius: 1.2em;
+    margin-right: 0.5em;
+}
+.radio-male + label>span{
+    border-color: #41ad49;
+}
+.radio-female + label>span{
+    border-color: #e44061;
+}
+/* переключатели */
+.radio-male + label,
+.radio-female + label{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    margin-right: 1em;
+}
+.radio-male + label::before{
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 0;
+    border-radius: 1em;
+    background: #41ad49;
+    position: absolute;
+    left: 4px;
+}
+.radio-female + label::before{
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 0;
+    border-radius: 1em;
+    background: #e44061;
+    position: absolute;
+    left: 4px;
+}
+.radio-label-div{
+    display: inline-block;
+    font-size: 1.1em;
+}
+
+/* свойства input type="button" */
+.button-active, 
+.button-active-hover,
+.button-danger,
+.button-danger-hover,
+.button-disabled{
+    padding: 0.8em 2em;
+    margin-right: 0.5em;
+    border-radius: 5px;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+.button-active,
+.button-circle-plus{
+    background: #41ad49; 
+}
+.button-active-hover{
+    background: #2c7731
+    ;
+}
+.button-danger,
+.button-circle-minus{
+    background: #e44061;
+}
+.button-danger-hover{
+    background: #97293f;
+}
+.button-disabled{
+    background: #808080;
+}
+.button-circle-plus,
+.button-circle-minus{
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    margin-right: 0.5em;
+    font-size: 1.4em;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+/* свойства для textarea */
+.textarea{
+    width: 400px;
+    height: 150px;
+    border-radius: 5px;
+    padding-top: 1em;
+    padding-left: 1.5em;
+}
